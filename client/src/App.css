@@ -13,3 +13,19 @@
   box-shadow: 5px 5px 5px rgb(142, 139, 139);
   margin: 2%;
 }
+
+.count {
+  vertical-align: middle;
+  padding: 0 10%;
+}
+
+.counter button {
+  border: none;
+  border-radius: 25px;
+  background-color: white;
+  font-size: larger;
+  font-weight: bold;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  padding: 0 10%;
+  vertical-align: middle;
+}
