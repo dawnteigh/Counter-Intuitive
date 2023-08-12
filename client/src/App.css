@@ -21,9 +21,12 @@
 }
 .counter-name input {
   width: 20vw;
+  max-width: 200px;
   border: none;
   text-align: center;
-  font-size: 1em;
+  font-size: inherit;
+  margin: 0;
+  padding: 0;
 }
 
 .counter-name input:focus {

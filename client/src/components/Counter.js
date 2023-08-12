@@ -17,7 +17,7 @@ const Counter = () => {
       {
         edit ?
           <div className="counter-name">
-            <input value={name} onChange={(e) => setName(e.target.value)} onKeyDown={handleEnter} autoFocus />
+            <input value={name} maxLength="25" onChange={(e) => setName(e.target.value)} onKeyDown={handleEnter} autoFocus />
           </div> :
           <div className="counter-name">
             <span onClick={() => setEdit(true)}>{name}</span>
