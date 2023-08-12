@@ -8,18 +8,21 @@
   display: block;
   width: 10%;
   font-size: larger;
+}
+.counter-name {
+  display: inline;
+}
+
+.count {
+  vertical-align: middle;
+  padding: 0 10%;
   border: solid black;
   border-radius: 25px;
   box-shadow: 5px 5px 5px rgb(142, 139, 139);
   margin: 2%;
 }
 
-.count {
-  vertical-align: middle;
-  padding: 0 10%;
-}
-
-.counter button {
+.count button {
   border: none;
   border-radius: 25px;
   background-color: white;

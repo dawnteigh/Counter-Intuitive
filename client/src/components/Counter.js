@@ -6,19 +6,27 @@ const Counter = () => {
   const [name, setName] = useState("")
   const [edit, setEdit] = useState(true)
 
+  const handleEnter = (e) => {
+    if (e.key === 'Enter') {
+      setEdit(false)
+    }
+  }
   return (
     <div className="counter">
       {
         edit ?
-          <>
-            <input value={name} onChange={(e) => setName(e.target.value)} />
-            <button onClick={() => setEdit(false)} >Submit</button>
-          </> :
-          <span onClick={() => setEdit(true)} >{name}</span>
+          <div className="counter-name">
+            <input value={name} onChange={(e) => setName(e.target.value)} onKeyDown={handleEnter} autoFocus />
+          </div> :
+          <div className="counter-name">
+            <span onClick={() => setEdit(true)}>{name}</span>
+          </div>
       }
-      <span className="count">{count}</span>
-      <button onClick={() => setCount(count + 1)}>+</button>
-      <button onClick={() => setCount(count - 1)}>-</button>
+      <div className="count">
+        {count}
+        <button onClick={() => setCount(count + 1)}>+</button>
+        <button onClick={() => setCount(count - 1)}>-</button>
+      </div>
     </div>
   )
 }
