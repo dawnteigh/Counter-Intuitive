@@ -1,10 +1,10 @@
 import './App.css';
-import Counter from './Counter'
+import Container from './components/Container'
 
 function App() {
   return (
     <div className="App">
-      <Counter />
+      <Container />
     </div>
   );
 }
