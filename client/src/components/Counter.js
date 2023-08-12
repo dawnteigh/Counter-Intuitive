@@ -3,14 +3,15 @@ import React, { useState } from 'react'
 const Counter = () => {
 
   const [count, setCount] = useState(0)
-  const [name, setName] = useState("")
-  const [edit, setEdit] = useState(true)
+  const [name, setName] = useState("Counter")
+  const [edit, setEdit] = useState(false)
 
   const handleEnter = (e) => {
     if (e.key === 'Enter') {
       setEdit(false)
     }
   }
+
   return (
     <div className="counter">
       {
@@ -23,9 +24,11 @@ const Counter = () => {
           </div>
       }
       <div className="count">
-        {count}
-        <button onClick={() => setCount(count + 1)}>+</button>
-        <button onClick={() => setCount(count - 1)}>-</button>
+        <span>{count}</span>
+        <span>
+          <button onClick={() => setCount(count + 1)}>+</button>
+          <button onClick={() => setCount(count - 1)}>-</button>
+        </span>
       </div>
     </div>
   )

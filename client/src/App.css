@@ -1,21 +1,41 @@
 .App {
   text-align: center;
-  margin-left: 5%;
-  margin-right: 5%;
+  margin: 5%;
+  font-size: 14px;
+  box-sizing: border-box;
 }
 
 .counter {
-  display: block;
-  width: 10%;
-  font-size: larger;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 20vw;
+  max-width: 200px;
+  font-size: 1.2em;
 }
+
 .counter-name {
-  display: inline;
+  margin: 0 auto;
+  width: fit-content;
+  cursor: pointer;
+}
+.counter-name input {
+  width: 20vw;
+  border: none;
+  text-align: center;
+  font-size: 1em;
+}
+
+.counter-name input:focus {
+  outline: none;
 }
 
 .count {
-  vertical-align: middle;
-  padding: 0 10%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 12.5%;
   border: solid black;
   border-radius: 25px;
   box-shadow: 5px 5px 5px rgb(142, 139, 139);
@@ -29,6 +49,5 @@
   font-size: larger;
   font-weight: bold;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  padding: 0 10%;
-  vertical-align: middle;
 }
+
