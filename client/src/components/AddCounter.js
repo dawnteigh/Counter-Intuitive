@@ -4,11 +4,11 @@ const AddCounter = () => {
 
 	const [formData, setFormData] = useState({
 		name: "",
-		class: "",
+		style: "",
 		count: 0
 	})
 
-	const handleSelect = (e) => setFormData({...formData, class: e.target.value})
+	const handleSelect = (e) => setFormData({...formData, style: e.target.value})
 	const handleChange = (e) => {
 		setFormData({
 			...formData,
@@ -25,8 +25,8 @@ const AddCounter = () => {
 			<form onSubmit={handleSubmit}>
 				<label htmlFor="name">Name of new counter:</label>
 				<input type="text" id="name" value={formData.name} onChange={handleChange} />
-				<label htmlFor="class" >Select a style:</label>
-				<select id="class" onChange={handleSelect}>
+				<label htmlFor="style" >Select a style:</label>
+				<select id="style" onChange={handleSelect}>
 					<option value="" >Default</option>
 					<option value="red" >Red</option>
 				</select>
