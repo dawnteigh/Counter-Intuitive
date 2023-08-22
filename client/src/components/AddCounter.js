@@ -8,7 +8,7 @@ const AddCounter = () => {
 		count: 0
 	})
 
-	const handleSelect = (e) => setFormData({...formData, style: e.target.value})
+	const handleSelect = (e) => setFormData({ ...formData, style: e.target.value })
 	const handleChange = (e) => {
 		setFormData({
 			...formData,
@@ -30,10 +30,10 @@ const AddCounter = () => {
 					<option value="" >Default</option>
 					<option value="red" >Red</option>
 				</select>
-				<label htmlFor="name">Optional starting value (default is zero):</label>
+				<label htmlFor="count">Optional starting value (default is zero):</label>
 				<input type="number" id="count" value={formData.count} onChange={handleChange} />
 				<input type="submit" value="Add Counter" />
-      </form>
+			</form>
 		</div>
 	)
 }

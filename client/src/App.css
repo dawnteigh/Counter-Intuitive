@@ -57,11 +57,21 @@
 
 .form-div {
   width: 20%;
-  height: 20%
+  height: 20%;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 2%;
 }
 
 .form-div form {
   display: grid;
-  grid-template-columns: repeat(1fr);
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 1fr 1fr;
 }
 
+#name {
+  height: 2rem;
+  font-size: 1.2rem;
+  border-radius: 5px;
+}
