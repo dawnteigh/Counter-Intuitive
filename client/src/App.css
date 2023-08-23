@@ -57,21 +57,29 @@
 
 .form-div {
   width: 20%;
-  height: 20%;
+  height: 25%;
   position: absolute;
   bottom: 0;
   right: 0;
-  padding: 2%;
 }
 
 .form-div form {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  row-gap: 10px
 }
 
-#name {
-  height: 2rem;
-  font-size: 1.2rem;
-  border-radius: 5px;
+label {
+  font-size: .8rem;
+  align-self: flex-start;
+}
+
+#count {
+  width: 15%;
+}
+
+input[type="submit"] {
+  width: 80%;
 }

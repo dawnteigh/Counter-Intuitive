@@ -23,15 +23,24 @@ const AddCounter = () => {
 	return (
 		<div className="form-div">
 			<form onSubmit={handleSubmit}>
-				<label htmlFor="name">Name of new counter:</label>
-				<input type="text" id="name" value={formData.name} onChange={handleChange} />
-				<label htmlFor="style" >Select a style:</label>
-				<select id="style" onChange={handleSelect}>
-					<option value="" >Default</option>
-					<option value="red" >Red</option>
-				</select>
-				<label htmlFor="count">Optional starting value (default is zero):</label>
-				<input type="number" id="count" value={formData.count} onChange={handleChange} />
+				<div className="form-name">
+					<label htmlFor="name">{"Name of new counter: "}
+						<input type="text" id="name" value={formData.name} onChange={handleChange} />
+					</label>
+				</div>
+				<div className="form-style">
+					<label htmlFor="style" >{"Select a style: "}
+						<select id="style" onChange={handleSelect}>
+							<option value="" >Default</option>
+							<option value="red" >Red</option>
+						</select>
+					</label>
+				</div>
+				<div className="form-count">
+					<label htmlFor="count">{"Optional starting value (default is zero): "}
+						<input type="number" id="count" value={formData.count} onChange={handleChange} />
+					</label>
+				</div>
 				<input type="submit" value="Add Counter" />
 			</form>
 		</div>
