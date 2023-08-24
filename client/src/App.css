@@ -56,24 +56,28 @@
 }
 
 .form-div {
-  width: 20%;
-  height: 25%;
-  position: absolute;
+  width: 80%;
+  height: 5%;
+  position: fixed;
   bottom: 0;
-  right: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 1px solid black;
+  border-radius: 10px 10px 0 0;
+  border-bottom: none;
+  padding-top: 2px;
 }
 
 .form-div form {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   flex-wrap: nowrap;
-  align-items: center;
-  row-gap: 10px
+  justify-content: space-evenly;
+  margin-top: .5rem;
 }
 
 label {
   font-size: .8rem;
-  align-self: flex-start;
 }
 
 #count {
@@ -81,5 +85,5 @@ label {
 }
 
 input[type="submit"] {
-  width: 80%;
+  width: 10%;
 }
