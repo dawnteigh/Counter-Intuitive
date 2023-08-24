@@ -1,8 +1,21 @@
 .App {
   text-align: center;
-  margin: 5%;
+  margin: 0;
   font-size: 14px;
   box-sizing: border-box;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.dark-mode {
+  background-color: #232323;
+  color: #ccc;
+
+  button {
+    background-color: #232323;
+    color: #ccc;
+  }
 }
 
 .counter {
@@ -12,6 +25,7 @@
   width: 20vw;
   max-width: 200px;
   font-size: 1.2em;
+  margin: 2%;
 }
 
 .counter-name {
