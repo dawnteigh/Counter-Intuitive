@@ -3,7 +3,7 @@ class CountersController < ApplicationController
 
   # GET /counters or /counters.json
   def index
-    @counters = Counter.all
+    render json: Counter.all, status: :ok
   end
 
   # GET /counters/1 or /counters/1.json
@@ -21,17 +21,8 @@ class CountersController < ApplicationController
 
   # POST /counters or /counters.json
   def create
-    @counter = Counter.new(counter_params)
-
-    respond_to do |format|
-      if @counter.save
-        format.html { redirect_to counter_url(@counter), notice: "Counter was successfully created." }
-        format.json { render :show, status: :created, location: @counter }
-      else
-        format.html { render :new, status: :unprocessable_entity }
-        format.json { render json: @counter.errors, status: :unprocessable_entity }
-      end
-    end
+    counter = Counter.create!(counter_params)
+    render json: counter, status: :created
   end
 
   # PATCH/PUT /counters/1 or /counters/1.json
@@ -65,6 +56,6 @@ class CountersController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def counter_params
-      params.require(:counter).permit(:name, :style, :count)
+      params.permit(:name, :style, :count)
     end
 end
