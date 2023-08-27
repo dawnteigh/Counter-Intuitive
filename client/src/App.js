@@ -6,14 +6,7 @@ import { useState, useEffect } from 'react'
 function App() {
 
   const [mode, setMode] = useState("light")
-  const [counters, setCounters] = useState(false)
 
-  // useEffect(()=> {
-  //   async () => {
-  //     await fetch('/counters')
-
-  //   }
-  // }, [counters])
 
   const handleMode = () => {
     if (mode === "light") setMode("dark")
