@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
 import { useOutsideClick } from '../hooks/useOutsideClick'
 
-const Counter = () => {
+const Counter = ({ counter }) => {
 
-  const [count, setCount] = useState(0)
-  const [name, setName] = useState("Counter")
+  const [count, setCount] = useState(counter.count)
+  const [name, setName] = useState(counter.name)
   const [edit, setEdit] = useState(false)
 
   const handleEnter = (e) => {
@@ -12,14 +12,14 @@ const Counter = () => {
       setEdit(false)
     }
   }
- 
+
   const handleClick = (e) => {
     setEdit(true)
     e.stopPropagation()
   }
 
   const handleOutsideClick = () => setEdit(false)
-  
+
   const ref = useOutsideClick(handleOutsideClick)
 
   return (
