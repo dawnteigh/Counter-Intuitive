@@ -1,10 +1,18 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import Counter from './Counter'
+import { CounterContext } from '../context/CounterContext'
 
 const Container = () => {
+
+  const { counters } = useContext(CounterContext)
+
+  const displayCounters = counters.map(c => {
+    return <Counter counter={c} />
+  })
+
   return (
     <div>
-        <Counter />
+      {displayCounters}
     </div>
   )
 }
