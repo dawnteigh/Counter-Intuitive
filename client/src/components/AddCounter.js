@@ -4,7 +4,7 @@ const AddCounter = () => {
 
 	const [formData, setFormData] = useState({
 		name: "",
-		style: "",
+		style: "default",
 		count: 0
 	})
 
@@ -23,6 +23,12 @@ const AddCounter = () => {
 			body: JSON.stringify(formData)
 		})
 			.then(r => r.json())
+		//add to counters state to trigger rerender
+		setFormData({
+			name: "",
+			style: "default",
+			count: 0
+		})
 	}
 
 	return (
@@ -36,7 +42,7 @@ const AddCounter = () => {
 				<div className="form-style">
 					<label htmlFor="style" >{"Select a style: "}
 						<select id="style" onChange={handleSelect}>
-							<option value="" >Default</option>
+							<option value="default" >Default</option>
 							<option value="red" >Red</option>
 						</select>
 					</label>
