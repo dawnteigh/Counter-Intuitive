@@ -7,7 +7,7 @@ const Container = () => {
   const { counters } = useContext(CounterContext)
 
   const displayCounters = counters.map(c => {
-    return <Counter counter={c} />
+    return <Counter key={c.id} counter={c} />
   })
 
   return (

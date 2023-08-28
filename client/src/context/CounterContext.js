@@ -4,7 +4,7 @@ const CounterContext = React.createContext()
 
 function CounterProvider({ children }) {
 
-  const [counters, setCounters] = useState(null)
+  const [counters, setCounters] = useState([])
 
   useEffect(() => {
     fetch('http://localhost:3000/counters')
